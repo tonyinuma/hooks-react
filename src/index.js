@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Memorize } from "./components/Memos/Memorize";
+import { MemoHook } from "./components/Memos/MemoHook";
+// import { Memorize } from "./components/Memos/Memorize";
 // import { Layout } from "./components/LayoutEffect/Layout";
 // import { RealExampleRef } from "./components/UseRef/RealExampleRef";
 // import { FocusScreen } from "./components/UseRef/FocusScreen";
@@ -11,4 +12,4 @@ import { Memorize } from "./components/Memos/Memorize";
 //import { SimpleForm } from "./components/Form/SimpleForm";
 //import { HookApp } from "./HookApp";
 
-ReactDOM.render(<Memorize />, document.getElementById("root"));
+ReactDOM.render(<MemoHook />, document.getElementById("root"));
