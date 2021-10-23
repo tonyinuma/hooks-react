@@ -13,7 +13,7 @@ export const Layout = () => {
 
     const pTag = useRef();
 
-    const res = useLayoutEffect(() => {
+    useLayoutEffect(() => {
         const data = pTag.current.getBoundingClientRect();
         setBoxSize(data)
     }, [quote]);
