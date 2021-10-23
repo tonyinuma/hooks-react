@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useCounter } from "../../hooks/useCounter";
 import "../Form/effects.css";
 
 export const MemoHook = () => {
-    const { state, increment } = useCounter(10);
+    const { state, increment } = useCounter(1000);
     const [show, setShow] = useState(true);
+
+    const largeProcess = (iterations) => {
+        for (let i = 0; i < iterations; i++) {
+            console.log("Here we go!");
+        }
+
+        return `${iterations} Iterations Completed`;
+    };
+
+    const memoLargeProcess = useMemo(() => largeProcess(state), [state]);
 
     return (
         <div>
@@ -13,6 +23,7 @@ export const MemoHook = () => {
                 Counter: <small>{state}</small>
             </h3>
             <hr />
+            <p>{memoLargeProcess}</p>
 
             <button className="btn btn-primary" onClick={increment}>
                 Increment
