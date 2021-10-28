@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { ShowIncrement } from "./ShowIncrement";
 import "../Form/effects.css";
 
 export const CallbackHook = () => {
     const [counter, setCounter] = useState(10);
 
-    const increment = () => {
-        setCounter(counter + 1);
-    };
+    // const increment = () => {
+    //     setCounter(counter + 1);
+    // };
+
+    const increment = useCallback(
+        () => {
+            setCounter(c => c + 1);
+        },
+        [setCounter],
+    )
 
     return (
         <div>
