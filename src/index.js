@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Padre } from "./components/TareaMemo/Padre";
+// import './components/UseReducer/intro-reducer';
 // import { CallbackHook } from "./components/Memos/CallbackHook";
 // import { MemoHook } from "./components/Memos/MemoHook";
 // import { Memorize } from "./components/Memos/Memorize";
