@@ -11,8 +11,26 @@ const initialState = [
 ];
 
 export const TodoApp = () => {
-    const [todos] = useReducer(todoReducer, initialState);
+    const [todos, dispatch] = useReducer(todoReducer, initialState);
     console.log(todos);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const newTodo = {
+            id: new Date().getTime(),
+            desc: "Aprender Angular",
+            done: false,
+        };
+
+        const action = {
+            type: "Add",
+            payload: newTodo,
+        };
+
+        dispatch(action);
+    };
+
     return (
         <>
             <h1>Todo App ({todos.length})</h1>
@@ -36,7 +54,7 @@ export const TodoApp = () => {
                 <div className="col-5">
                     <h4>Agregar Todo</h4>
                     <hr />
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <input
                             type="text"
                             name="description"
@@ -44,7 +62,12 @@ export const TodoApp = () => {
                             autoComplete="off"
                             className="form-control"
                         />
-                        <button type="button" className="btn btn-dark mt-2 w-100">Add</button>
+                        <button
+                            type="submit"
+                            className="btn btn-dark mt-2 w-100"
+                        >
+                            Add
+                        </button>
                     </form>
                 </div>
             </div>
