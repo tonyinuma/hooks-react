@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { CallbackHook } from "./components/Memos/CallbackHook";
+import { Padre } from "./components/TareaMemo/Padre";
+// import { CallbackHook } from "./components/Memos/CallbackHook";
 // import { MemoHook } from "./components/Memos/MemoHook";
 // import { Memorize } from "./components/Memos/Memorize";
 // import { Layout } from "./components/LayoutEffect/Layout";
@@ -13,4 +14,4 @@ import { CallbackHook } from "./components/Memos/CallbackHook";
 //import { SimpleForm } from "./components/Form/SimpleForm";
 //import { HookApp } from "./HookApp";
 
-ReactDOM.render(<CallbackHook />, document.getElementById("root"));
+ReactDOM.render(<Padre />, document.getElementById("root"));
