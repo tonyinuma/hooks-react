@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Padre } from "./components/TareaMemo/Padre";
+import { TodoApp } from "./components/UseReducer/TodoApp";
+// import { Padre } from "./components/TareaMemo/Padre";
 // import './components/UseReducer/intro-reducer';
 // import { CallbackHook } from "./components/Memos/CallbackHook";
 // import { MemoHook } from "./components/Memos/MemoHook";
@@ -15,4 +16,4 @@ import { Padre } from "./components/TareaMemo/Padre";
 //import { SimpleForm } from "./components/Form/SimpleForm";
 //import { HookApp } from "./HookApp";
 
-ReactDOM.render(<Padre />, document.getElementById("root"));
+ReactDOM.render(<TodoApp />, document.getElementById("root"));
